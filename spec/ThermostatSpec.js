@@ -12,6 +12,10 @@ describe('Thermostat', function() {
     expect(thermostat.currentTemperature()).toEqual(20)
   });
 
+  it('its min temperature is 10', function() {
+    expect(thermostat.minTemperature()).toEqual(10)
+  });
+
   it('raises the temperature', function() {
     thermostat.up();
     expect(thermostat.currentTemperature()).toEqual(21)
@@ -27,4 +31,12 @@ describe('Thermostat', function() {
     thermostat.reset();
     expect(thermostat.currentTemperature()).toEqual(20)
   });
+
+  it('decrease the temperature', function() {
+    for(var i = 1; i < 10; i++) { thermostat.down(); }
+    thermostat.down();
+    expect(thermostat.currentTemperature()).toEqual(10)
+  });
+
+
 });
