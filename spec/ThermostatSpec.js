@@ -62,6 +62,14 @@ describe('Thermostat', function() {
       thermostat.reset();
       expect(thermostat.currentTemperature()).toEqual(20)
     });
+
+    it('resets the temperature to 25', function() {
+      thermostat.savingModeOff();
+      for(var i = 1; i < 6; i++) { thermostat.up(); }
+      thermostat.up();
+      thermostat.savingModeOn();
+      expect(thermostat.currentTemperature()).toEqual(25)
+    });
   });
 
   describe('increase the temperature', function(){

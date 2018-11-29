@@ -33,6 +33,7 @@ $(document).ready(function() {
   function updateTemperature() {
     $('#temperature').text(thermostat.currentTemperature());
   };
+  
   function status() {
     $('#power-saving-status').text(thermostat.powerMode());
   };

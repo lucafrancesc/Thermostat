@@ -5,8 +5,8 @@ function Thermostat() {
   this.minTemp = 10
   this.savingMode = 'On'
   this.maxTemp = 25
-
 }
+
 // TEMPERATURE
 Thermostat.prototype.currentTemperature = function () {
   return this.temperature
@@ -27,6 +27,9 @@ Thermostat.prototype.powerMode = function () {
 
 Thermostat.prototype.savingModeOn = function () {
   this.maxTemp = 25
+  if (this.temperature > this.maxTemp) {
+    this.resetTo25();
+  }
   return this.savingMode = 'On'
 };
 
@@ -66,6 +69,10 @@ Thermostat.prototype.down = function () {
 
 Thermostat.prototype.reset = function () {
   this.temperature = 20
+};
+
+Thermostat.prototype.resetTo25 = function () {
+  this.temperature = 25
 };
 
 //  THERMOSTAT USAGE
