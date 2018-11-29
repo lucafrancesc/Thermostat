@@ -36,6 +36,7 @@ Thermostat.prototype.savingModeOff = function () {
 };
 
 // TEMPERATURE REGULATORS
+
 Thermostat.prototype.up = function () {
   if (this.savingMode === 'On') {
     if (this.temperature < this.maxTemp) {
@@ -57,6 +58,7 @@ Thermostat.prototype.up = function () {
 Thermostat.prototype.down = function () {
   if (this.temperature > this.minTemp) {
     this.temperature--
+    return this.minTemp
   } else {
     return this.minTemp
   }
@@ -64,4 +66,16 @@ Thermostat.prototype.down = function () {
 
 Thermostat.prototype.reset = function () {
   this.temperature = 20
+};
+
+//  THERMOSTAT USAGE
+
+Thermostat.prototype.usage = function () {
+  if (this.temperature < 18 ) {
+    return this.energyUsage = 'Low'
+  } else if (this.temperature < 25 ){
+    return this.energyUsage = 'Medium'
+  } else {
+    return this.energyUsage = 'High'
+  }
 };

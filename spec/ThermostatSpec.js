@@ -83,6 +83,27 @@ describe('Thermostat', function() {
       expect(thermostat.currentTemperature()).toEqual(10)
     });
   });
+
+  describe('energy usage', function(){
+    it('return low usage if temp below 18', function(){
+      for(var i = 1; i < 3; i++) { thermostat.down(); }
+      thermostat.down();
+      expect(thermostat.currentTemperature()).toEqual(17)
+      expect(thermostat.usage()).toEqual('Low')
+    });
+
+    it('return medium usage if temp below 25', function(){
+      expect(thermostat.usage()).toEqual('Medium')
+    });
+
+    it('return high usage if temp above 25', function(){
+      thermostat.savingModeOff()
+      for(var i = 1; i < 6; i++) { thermostat.up(); }
+      thermostat.up();
+      expect(thermostat.currentTemperature()).toEqual(26)
+      expect(thermostat.usage()).toEqual('High')
+    });
+  });
 });
 // describe('', function(){
 //
