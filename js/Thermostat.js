@@ -8,16 +8,16 @@ function Thermostat() {
 
 }
 // TEMPERATURE
+Thermostat.prototype.currentTemperature = function () {
+  return this.temperature
+};
+
 Thermostat.prototype.minTemperature = function () {
   return this.minTemp
 };
 
 Thermostat.prototype.maxTemperature = function () {
   return this.maxTemp
-};
-
-Thermostat.prototype.currentTemperature = function () {
-  return this.temperature
 };
 
 // MODES

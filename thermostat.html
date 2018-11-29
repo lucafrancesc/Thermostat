@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+ <head>
+
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+   <title>Thermostat App</title>
+ </head>
+ <body>
+
+   <br>
+   <center><h2><font face="courier new"><b> Thermostat </b></font></h2></center>
+   <br><br>
+   <section>
+     <p>
+     <center>
+       <h1 id="temperature"></h1>
+         <button type="button" class="btn btn-outline-success" id="down"> - </button>
+         <button type="button" class="btn btn-outline-success" id="up"> + </button>
+         <br><br>
+         <button type="button" class="btn btn-outline-primary" id="reset"> Reset </button>
+         <br><br>
+         <br><br>
+         <h4><font face="courier new">Power Saving Mode is </font></h4>
+         <font face="courier new"><h3 id="power-saving-status"> </h3></font><br>
+         <button type="button" class="btn btn-outline-success" id="powersaving-on"> On </button>
+         <button type="button" class="btn btn-outline-danger" id="powersaving-off"> Off </button>
+     </center>
+     </p>
+   </section>
+
+   <script src="js/jQuery.js"></script>
+   <script src="js/Thermostat.js"></script>
+   <script src="js/ThermostatController.js"></script>
+
+ </body>
+</html>
