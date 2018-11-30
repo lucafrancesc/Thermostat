@@ -16,6 +16,12 @@
    <section>
      <p>
      <center>
+       <h1>Current temperature: <span id="current-temperature">20</span></h1>
+      <select id="current-city">
+      <option value="london">London</option>
+      <option value="paris">Paris</option>
+      <option value="tokyo">Tokyo</option>
+      </select><br><br>
        <h1 id="temperature"></h1>
          <button type="button" class="btn btn-outline-success" id="down"> - </button>
          <button type="button" class="btn btn-outline-success" id="up"> + </button>
@@ -23,14 +29,15 @@
          <button type="button" class="btn btn-outline-primary" id="reset"> Reset </button>
          <br><br>
          <br><br>
-         <h4><font face="courier new">Power Saving Mode is </font></h4>
+         <h4><font face="courier new">Power Saving Mode is: </font></h4>
          <font face="courier new"><h3 id="power-saving-status"> </h3></font><br>
          <button type="button" class="btn btn-outline-success" id="powersaving-on"> On </button>
          <button type="button" class="btn btn-outline-danger" id="powersaving-off"> Off </button>
+         <h4><font face="courier new">Your energy usage is: </font></h4>
+         <font face="courier new"><h3 id="usage"> </h3></font><br>
      </center>
      </p>
    </section>
-
    <script src="js/jQuery.js"></script>
    <script src="js/Thermostat.js"></script>
    <script src="js/ThermostatController.js"></script>
